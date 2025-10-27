@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルーレット出目シミュレーター</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; }
+        h1 { color: #333; text-align: center; }
+        #controls { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; }
+        input[type="number"] { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; transition: background-color 0.3s; }
+        button:hover { background-color: #45a049; }
+        #results { margin-top: 20px; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .spin-result { padding: 5px; margin-bottom: 5px; border-bottom: 1px dotted #eee; }
+        .number-0 { background-color: #008000; color: white; padding: 3px 6px; border-radius: 4px; font-weight: bold; }
+        .number-red { background-color: #FF0000; color: white; padding: 3px 6px; border-radius: 4px; font-weight: bold; }
+        .number-black { background-color: #000000; color: white; padding: 3px 6px; border-radius: 4px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>ルーレット出目シミュレーター</h1>
+
+    <div id="controls">
+        <label for="spinCount">シミュレーション回数:</label>
+        <input type="number" id="spinCount" value="10" min="1" max="1000">
+        <button onclick="simulateSpins()">ルーレットを回す</button>
+    </div>
+
+    <div id="results">
+        <h2>結果</h2>
+        <div id="output">
+            <p>回数を入力して「ルーレットを回す」ボタンを押してください。</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
